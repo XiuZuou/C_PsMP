@@ -11,9 +11,6 @@
 int main()
 {
 	int arr[][3] = { 0 };
-	;
-	;
-	;
 
 
 	return 0;
