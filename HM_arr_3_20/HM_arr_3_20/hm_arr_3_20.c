@@ -172,36 +172,85 @@
 //输出描述：
 //输出为一行，输出长度为n + m的升序序列，即长度为n的升序序列和长度为m的升序序列中的元素重新进行升序序列排列合并。
 
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int n = 0;
+//	int m = 0;
+//	int i = 0;
+//	int j = 0;
+//	int arr1[1000] = { 0 };
+//	int arr2[1000] = { 0 };
+//	int cmp = 0;
+//	while (scanf("%d%d", &n, &m) != EOF)
+//	{
+//		for (i = 0;i < n;i++)
+//			scanf("%d", &arr1[i]);
+//		for (j = 0;j < m;j++)
+//			scanf("%d", &arr2[j]);
+//		int i = 0;
+//		int j = 0;
+//		while (i < n && j < m)
+//		{
+//			if (arr1[i] > arr2[j])
+//			{
+//				printf("%d ", arr2[j]);
+//				j++;
+//			}
+//			else
+//			{
+//				printf("%d ", arr1[i]);
+//				i++;
+//			}
+//		}
+//		while (i < n)
+//		{
+//			printf("%d ", arr1[i]);
+//			i++;
+//		}
+//		while (j < m)
+//		{
+//			printf("%d ", arr2[j]);
+//			j++;
+//		}
+//	}
+//
+//	return 0;
+//}
+
+//
+//重新写一次
+//
 #include<stdio.h>
 
 int main()
 {
 	int n = 0;
 	int m = 0;
-	int i = 0;
-	int j = 0;
 	int arr1[1000] = { 0 };
 	int arr2[1000] = { 0 };
-	int cmp = 0;
 	while (scanf("%d%d", &n, &m) != EOF)
 	{
-		for (i = 0;i < n;i++)
+	//数组输入
+		for (int i = 0;i < n;i++)
 			scanf("%d", &arr1[i]);
-		for (j = 0;j < m;j++)
-			scanf("%d", &arr2[j]);
+		for (int i = 0;i < m;i++)
+			scanf("%d", &arr2[i]);
+	//进行比较排序
 		int i = 0;
 		int j = 0;
 		while (i < n && j < m)
 		{
-			if (arr1[i] > arr2[j])
-			{
-				printf("%d ", arr2[j]);
-				j++;
-			}
-			else
+			if (arr1[i] < arr2[j])
 			{
 				printf("%d ", arr1[i]);
 				i++;
+			}
+			else
+			{
+				printf("%d ", arr2[j]);
+				j++;
 			}
 		}
 		while (i < n)
@@ -216,9 +265,6 @@ int main()
 		}
 	}
 
+
 	return 0;
 }
-
-//
-//重新写一次
-//
