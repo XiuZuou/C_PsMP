@@ -7,7 +7,7 @@ int bin_search(int arr[], int left, int right, int key)
 	int flag = 0;
 	while (left <= right)
 	{
-		mid = left + (right - left) / 2;
+		mid = left + (right - left) / 2;//mid需要放入循环
 		if (key < arr[mid])
 		{
 			right = mid - 1;
