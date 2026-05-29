@@ -18,14 +18,14 @@ int bin_search(int arr[], int left, int right, int key)
 		}
 		else
 		{
-			/*flag = 1;
-			break;*/
-			return mid;//这里分支为找到key和没找到key，if只起到判断作用，并非分支
+			flag = 1;
+			break;
+			//return mid;//这里分支为找到key和没找到key，if只起到判断作用，并非分支
 		}
 	}
-	/*if (flag == 1)
+	if (flag == 1)
 		return mid;
-	else*/
+	else
 		return -1;
 
 }
@@ -34,7 +34,7 @@ int bin_search(int arr[], int left, int right, int key)
 int main()
 {
 	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	int key = 16;
+	int key = 6;
 	int right = sizeof(arr) / sizeof(arr[0]) - 1;
 	int left = 0;
 	int i = bin_search(arr, left, right, key);
