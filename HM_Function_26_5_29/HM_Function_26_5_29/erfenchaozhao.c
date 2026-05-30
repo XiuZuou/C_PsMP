@@ -34,7 +34,7 @@ int bin_search(int arr[], int left, int right, int key)
 int main()
 {
 	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	int key = 6;
+	int key = 16;
 	int right = sizeof(arr) / sizeof(arr[0]) - 1;
 	int left = 0;
 	int i = bin_search(arr, left, right, key);
